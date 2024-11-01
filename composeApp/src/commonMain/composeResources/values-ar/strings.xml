@@ -1,4 +1,8 @@
 <resources>
-    <string name="hello">اهلا</string>
+    <string name="hello">اهلا انا احب كوتلن</string>
+    <string name="en">English</string>
+    <string name="ar">العربية</string>
+    <string name="app_language">لغة التطبيق : %1$s</string>
+    <string name="change_lang">تغيير اللغة</string>
 
 </resources>

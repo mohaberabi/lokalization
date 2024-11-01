@@ -1,27 +1,14 @@
-import androidx.compose.ui.unit.LayoutDirection
+import lokalization.composeapp.generated.resources.Res
+import lokalization.composeapp.generated.resources.ar
+import lokalization.composeapp.generated.resources.en
+import org.jetbrains.compose.resources.StringResource
 
-enum class LangDirection {
-    RTL,
-    LTR,
-}
-
-enum class AppLocales(
+enum class AppLang(
     val code: String,
-    val label: String,
-    val direction: LangDirection,
-
-    ) {
-
-    ENG(
-        "en", "English", LangDirection.LTR,
-    ),
-    ARA(
-        "ar", "عربي", LangDirection.RTL,
-    )
+    val stringRes: StringResource
+) {
+    English("en", Res.string.en),
+    Arabic("ar", Res.string.ar)
 }
 
 
-fun LangDirection.toLayoutDirection(): LayoutDirection = when (this) {
-    LangDirection.RTL -> LayoutDirection.Rtl
-    LangDirection.LTR -> LayoutDirection.Ltr
-}

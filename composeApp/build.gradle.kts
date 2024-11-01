@@ -31,7 +31,6 @@ kotlin {
     sourceSets {
 
         androidMain.dependencies {
-
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
         }
@@ -78,8 +77,14 @@ android {
     buildFeatures {
         compose = true
     }
+    androidResources {
+        generateLocaleConfig = true
+    }
     dependencies {
         debugImplementation(compose.uiTooling)
     }
+}
+dependencies {
+    implementation(libs.androidx.appcompat)
 }
 
